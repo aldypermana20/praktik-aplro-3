@@ -1,0 +1,134 @@
+MODUL PRAKTIKUM
+
+ALGORITMA
+DAN
+PEMROGRAMAN DENGAN
+BAHASA C
+
+TEKNIK INFORMATIKA
+UNIVERSITAS ISLAM NEGERI
+SUNAN GUNUNG DJATI BANDUNG
+
+MODUL III
+PEMILIHAN KONDISI
+Jenis-jenis pemilihan kondisi:
+·Pilihan Tunggal
+·Pilihan Ganda
+·Pilihan Majemuk
+·Struktur Case
+1.Pilihan Tunggal
+Bentuk paling sederhana pilihan tunggal adalah jika hanya ada satu pilihan kondisi yang disediakan.
+Bentuk umum:
+if (kondisi)
+{
+true statement;
+}
+Contoh Permasalahan: Menentukan huruf vokal dari suatu huruf yang dimasukkan dari keyboard.
+/* Program menentukan huruf vokal */
+#include<stdio . h>
+main()
+{
+char huruf;
+printf ("Program Menentukan Huruf Vokal \n");
+printf("	 \n
+\n"); printf("Masukkan huruf : ");
+scanf("%c", &huruf);
+if
+(huruf=='a' | |huruf=='i' | |huruf=='u' | |huruf=='e' | |huruf=='o ')
+printf("Huruf %c adalah huruf vokal\n",huruf);
+}
+2.Pilihan Ganda
+Digunakan untuk menentukan tindakan yang akan digunakan bila kondisi bernilai benar dan salah. Bentuk umum:
+if kondisi
+{
+true statement;
+} else
+{
+false statement;
+}
+Contoh Permasalahan: Menentukan bilangan terbesar dari dua buah bilangan.
+
+/* Program menentukan bilangan terbesar dari dua bilangan */
+#include<stdio . h>
+main()
+{
+int a,b;
+printf("Masukkan bilangan pertama =
+") ; scanf("%i",&a);
+printf("Masukkan bilangan kedua = ");
+scanf("%i",&b);
+if (a>b)
+printf("Bilangan terbesar adalah %i\n",a);
+else
+printf("Bilangan terbesar adalah %i\n",b);
+}
+3. Pilihan Majemuk
+Untuk menentukan tindakan yang akan digunakan disediakan lebih dari 2 alternatif. Merupakan bentuk statement if dengan statement if lain di dalam if sebelumnya. Bentuk umum:
+if kondisiA
+{
+if kondisiB
+{
+true statementB
+} else
+{
+false statementB
+}
+}
+else {
+false statementA
+}
+Contoh Permasalahan:
+Mengelompokan nilai dengan ketentuan : Jika nilai angka >= 90, maka nilai huruf = A Jika nilai angka >= 80, maka nilai huruf = B Jika nilai angka >= 70, maka nilai huruf = C Jika nilai angka >= 60, maka nilai huruf = D Jika nilai angka < 60, maka nilai huruf = E
+
+4. Struktur Case (Statement Switch)
+Untuk masalah dengan dua pilihan atau lebih, struktur CASE dapat menyederhanakan penulisan IF yang bertingkat-tingkat.
+Bentuk umum:
+Contoh permasalahan :
+Pemilihan kode jurusan dengan struktur case
+/* Program pemilihan kode jurusan */
+#include<stdio . h> #include<conio . h> #include<string. h> main()
+{
+char nama[15] ,ket[30] ,kode;
+printf("Masukkan nama mahasiswa:
+") ; scanf("%s", &nama);
+printf("Pilih kode jurusan [A/B/C/D] : ");
+kode=getche (); switch (kode)
+
+case 'A' : {
+strcpy(ket,"Jurusan Teknik Informatika");
+break;
+}
+case 'B' : {
+strcpy(ket,"Jurusan Manajemen Informatika"); break;
+}
+case 'C' : {
+strcpy (ket, "Jurusan Sistem
+Informasi"); break;
+}
+case 'D' : {
+strcpy(ket, "Jurusan Teknik Komputer");
+break;
+}
+}
+printf("\n \n");
+printf("Nama mahasiswa : %s \n",nama);
+printf("Kode jurusan : %c \n", kode);
+printf("Nama jurusan : %s
+\n",ket); getch();
+}
+LATIHAN
+1. Misalkan karyawan PT. Makmur dikelompokkan berdasarkan golongannya. Upah per jam tiap karyawan bergantung pada golongannya, dengan ketentuan :
+
+Golongan	Upah per Jam
+A	Rp. 5000,-
+B	Rp. 7000,-
+C	Rp. 8000,-
+D	Rp. 10000,-
+
+Jumlah jam kerja normal selama 1 minggu adalah 48 jam. Kelebihan jam kerja dianggap lembur dengan upah lembur adalah Rp.4000,- per jam untuk semua golongan karyawan. Buat program menghitung gaji karyawan mingguan. Data yang dimasukan dari keyboard adalah nama karyawan, golongan, jumlah jam kerja. Data yang dicetak adalah nama karyawan dan gajinya.
+Program dibuat dengan menggunakan struktur IF dan CASE.
+
+
+Silakan dicoba contoh-contoh program C dan kirimkan hasil screenshoot hasil dijalankan programnya! Jika ada kesalahan silakan diperbaiki dulu sebelum dijalankan
+Untuk Latihan kirimkan source code dan screenshoot program ke email ichantaufik@gmail.com dengan subject: Tugas 4 Prak Alpro-NIM-Nama-Kelas atau langsung diupload di lms.uinsgd.ac.id
+Kerjakan di Dev C++ 
